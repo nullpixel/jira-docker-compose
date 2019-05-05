@@ -3,13 +3,15 @@ services:
   jira:
     image: dchevell/jira-software
     ports: 
-      - "3579:8080"
+      - "127.0.0.1:3579:8080"
     depends_on:
       - db
     volumes:
-      - jira-volume:/var/atlassian/application-data/jira
+      - jira-volume:/var/atlassian/jira
     networks:
       - jira-internal
+    environment:
+      CATALINA_OPTS: "-Xms4096 -Xmx2048"
   db:
     image: postgres:10.4
     command: postgres -c random_page_cost=1.0
