@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   jira:
-    image: dchevell/jira-software
+    image: cptactionhank/atlassian-jira
     ports: 
       - "127.0.0.1:3579:8080"
     depends_on:
