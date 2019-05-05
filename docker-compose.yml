@@ -11,7 +11,7 @@ services:
     networks:
       - jira-internal
     environment:
-      CATALINA_OPTS: "-Xms4096 -Xmx2048"
+      CATALINA_OPTS: "-Xms2048 -Xmx4096"
   db:
     image: postgres:10.4
     command: postgres -c random_page_cost=1.0
