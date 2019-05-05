@@ -30,6 +30,6 @@ volumes:
   pgdata-volume:
 
 networks:
-  jira-interal:
+  jira-internal:
     driver: bridge
     internal: true
