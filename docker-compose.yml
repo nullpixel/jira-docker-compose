@@ -9,6 +9,7 @@ services:
     volumes:
       - jira-volume:/var/atlassian/application-data/jira
     networks:
+      - jira
       - jira-internal
     environment:
       CATALINA_OPTS: "-Xms2048m -Xmx4096m"
@@ -32,6 +33,7 @@ volumes:
   pgdata-volume:
 
 networks:
+  jira:
   jira-internal:
     driver: bridge
     internal: true
