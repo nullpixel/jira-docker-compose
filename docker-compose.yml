@@ -1,13 +1,13 @@
 version: "3.5"
 services:
   jira:
-    image: cptactionhank/atlassian-jira
+    image: dchevell/jira-software
     ports: 
-      - "127.0.0.1:3579:8080"
+      - "127.0.0.1:35791:8080"
     depends_on:
       - db
     volumes:
-      - jira-volume:/var/atlassian/jira
+      - jira-volume:/var/atlassian/application-data/jira
     networks:
       - jira-internal
     environment:
