@@ -3,7 +3,7 @@ services:
   jira:
     image: dchevell/jira-software
     ports: 
-      - "127.0.0.1:3579:8080"
+      - "3579:8080"
     depends_on:
       - db
     volumes:
